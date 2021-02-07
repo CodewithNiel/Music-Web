@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PandaMusic</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="navbar">
+            <img src="logo.png" id="logo">
+            <h2>PandaMusic</h2>
+            <ul>
+                <li> <a href="#">HOME</a> </li>
+                <li> <a href="#">ABOUT</a> </li>
+                <li> <a href="#">CONNECT</a> </li>
+                <li> <a href="#">ARTISTS</a> </li>
+            </ul>
+        </div>
+        <div class="content">
+            <h2>Official Site</h2>
+            <h1>PandaMusic</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Fugiat magni omnis dignissimos ad fuga doloremque.</p>
+            <p id="click">Click Here To Listen</p>
+            <img src="play.png" id="icon">
+        </div>
+    </div>
+    <audio id="mySong" >
+        <source src="music.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        let mySong = document.getElementById("mySong")
+        let icon = document.getElementById("icon")
+
+        icon.onclick = function(){
+            if(mySong.paused){
+                mySong.play();
+                icon.src = "pause.png"
+            }
+            else{
+                mySong.pause();
+                icon.src = "play.png"
+            }
+        }
+    </script>
+</body>
+
+</html>
